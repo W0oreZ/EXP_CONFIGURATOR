@@ -11,6 +11,10 @@ import {
   MONITOR_UNHANDLED,
   MONITOR_RAW,
   MONITOR_EVENT,
+  FLASH_START,
+  FLASH_END,
+  FLASH_SUCCESS,
+  FLASH_ERROR,
 } from "./actionTypes";
 
 const initialState = {
@@ -23,6 +27,11 @@ const initialState = {
   info: {},
   config : {loaded:false},
   sensors:{},
+  flasher:{
+    running: false,
+    error : "",
+    success : "",
+  }
 };
 
 export default function(state = initialState, action) {
@@ -83,6 +92,14 @@ export default function(state = initialState, action) {
         }
       }
       return newState
+    case FLASH_START:
+      return {...state, flasher: {running : true, error : "", success : ""}}
+    case FLASH_END:
+      return {...state, flasher: {...state.flasher, running : false}}
+    case FLASH_SUCCESS:
+      return {...state, flasher : {...state.flasher, success:action.payload}}
+    case FLASH_ERROR:
+      return {...state, flasher : {...state.flasher, error:action.payload}}
     default:
       return state;
   }

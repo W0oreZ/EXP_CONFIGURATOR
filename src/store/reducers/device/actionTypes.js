@@ -13,3 +13,8 @@ export const SET_INFO = "set_info";
 export const SET_CONFIG = "set_config";
 
 export const SENSOR_READ = "sensor_read";
+
+export const FLASH_START = "flash_start";
+export const FLASH_SUCCESS = "flash_success";
+export const FLASH_ERROR = "flash_error";
+export const FLASH_END = "flash_end";

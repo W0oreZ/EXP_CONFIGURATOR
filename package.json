@@ -19,6 +19,7 @@
     "electron-devtools-installer": "^2.2.4",
     "electron-is-dev": "^1.1.0",
     "electron-publisher-s3": "^20.17.2",
+    "exec-sh": "^0.3.4",
     "font-awesome": "^4.7.0",
     "google-maps-react": "^2.0.2",
     "mdbreact": "^4.19.2",

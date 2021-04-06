@@ -27,7 +27,7 @@ export default function DeviceCard(props) {
             </CardBody>
         </div>
         <div className="col-md-4 pr-2">
-            <img className="card-img img-fluid" src={deviceImage} />
+            <img className="card-img img-fluid" src={deviceImage} alt="deviceImg"/>
         </div>
       </div>
     </div>

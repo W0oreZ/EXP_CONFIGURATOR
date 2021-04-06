@@ -5,11 +5,13 @@ import Dashboard from './../views/Dashboard/';
 import DeviceLogin from './../views/DeviceLogin/';
 import SerialMonitor from './../views/Serial/SerialMonitor';
 import SettingWindow from '../views/SettingWindow/SettingWindow';
+import Flasher from './../views/Flasher/Flasher';
 
 
 const routes = [
   //main routes
-  { path: '/settings', component: SettingWindow , headerComponent: withHeader('', [{ title: 'Settings', path: '/serial-monitor' }]) },
+  { path: '/flasher', component: Flasher , headerComponent: withHeader('', [{ title: 'Flasher', path: '/flasher' }])},
+  { path: '/settings', component: SettingWindow , headerComponent: withHeader('', [{ title: 'Settings', path: '/settings' }]) },
   { path: '/serial-monitor', component: SerialMonitor , headerComponent: withHeader('', [{ title: 'Serial Monitor', path: '/serial-monitor' }]) },
   { path: '/dashboard', component: Dashboard, headerComponent: withHeader('Dashboard', [{ title: 'Welcome to EXP CONFIGURATOR', path: '/' }]) },
 
@@ -21,6 +23,7 @@ const routes = [
 export default routes;
 
 export const links = [
+  { url: "/flasher", label: "Flasher", icon: "ion ion-md-speedometer", class_name: "has-submenu" },
   { url: "/dashboard", label: "Dashboard", icon: "ion ion-md-speedometer", class_name: "has-submenu" },
   { url: "/serial-monitor", label: "Serial Monitor", icon: "ion-md-laptop", class_name: "has-submenu" },
   { url: "/settings", label: "Settings", icon: "ion ion-md-flower", class_name: "float-right" },
